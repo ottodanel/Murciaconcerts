@@ -1,0 +1,195 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #1D202B;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	display: flex;
+}
+
+.contenedor {
+	width: 90%;
+	height: 90vh;
+	max-width: 1200px;
+	margin: auto;
+	padding: 40px 0;
+
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap:20px
+	/*
+	display: flex;
+	*/
+	
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-conciertos {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+
+	/*
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px*/
+	
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+	
+	/*
+	width: 33.33%*/	
+}
+
+.card:hover{
+	transform: scale(1.2);
+}
+
+.card .textos {
+	height: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.card .textos p{
+	font-size: large;
+
+}
+
+.card .label{
+	height: 25px;
+	border-radius: 10px;
+	background-color: rgba(37,37,37,.65);
+}
+
+.banner {
+	
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+	
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+
+
+}
+
+.banner:hover{
+	transform: scale(1.2);
+}
+
+
+.banner .boton {
+	background: pink;
+	display: block;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	border: none;
+	border-radius: 100px;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+
+	.contenedor {
+		width: 90%;
+		height: 100vh;
+		max-width: 1200px;
+		margin: auto;
+		padding: 10px 10px;
+	
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	.banner {
+	
+		border-radius: 10px;
+		text-align: center;
+		padding: 20px;
+		background-size: cover;
+		background-position: center center;
+		height: 400px;
+		
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	
+	
+	}
+
+	.banner ul li {
+		margin: 5px;
+		font-weight: bold;
+	}
+	.contenedor-conciertos {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	
+		/*
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px*/
+		
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.contenedor {
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+		padding: 10px 10px;
+	
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	.contenedor-conciertos {
+		display: flex;
+		flex-direction: column;
+	
+		/*
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px*/
+		
+	}
+	
+}
